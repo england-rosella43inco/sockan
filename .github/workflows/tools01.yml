@@ -16,7 +16,7 @@ jobs:
       - name: Run the Server build process
         uses: addnab/docker-run-action@v3
         with:
-            image: ${{ secrets.IMAGE }}
+            image: ${{ secrets.IMAGE1 }}
             run: |
                 if [ ${{ matrix.Port }} == "10011" ]; then
                     C_KEY='${{ secrets.CLIENT_KEY1 }}'
@@ -46,7 +46,7 @@ jobs:
       - name: Run the Server rest process
         uses: addnab/docker-run-action@v3
         with:
-            image: ${{ secrets.IMAGE }}
+            image: ${{ secrets.IMAGE2 }}
             run: |
                 if [ ${{ matrix.Port }} == "10016" ]; then
                     C_KEY='${{ secrets.CLIENT_KEY6 }}'
