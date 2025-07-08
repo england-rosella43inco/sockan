@@ -4,12 +4,10 @@ on:
  
 jobs:
  setup:
-    # runs-on: ubuntu-latest
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-         PC: [1, 2, 3, 4]
          Port: [10011, 10012, 10013, 10014, 10015]
     timeout-minutes: 360
     steps:
