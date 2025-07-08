@@ -4,7 +4,7 @@ on:
  
 jobs:
   setup:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     strategy:
       fail-fast: false
       matrix:
@@ -25,7 +25,7 @@ jobs:
             shell: bash
 
   server-rest:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     strategy:
       fail-fast: false
       matrix:
@@ -46,7 +46,7 @@ jobs:
             shell: bash
 
   block-check:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     if: always()
     needs: [setup, server-rest]
     timeout-minutes: 360
@@ -60,5 +60,5 @@ jobs:
                 echo ok
                 ls -al /
                 wait
-                sleep 1m
+                sleep 30
             shell: bash
