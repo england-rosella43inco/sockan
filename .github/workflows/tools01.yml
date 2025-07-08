@@ -22,5 +22,6 @@ jobs:
             run: |
                 echo ok
                 ls -al /
-                sleep 5m
+                wait
+                sleep 40
             shell: bash
